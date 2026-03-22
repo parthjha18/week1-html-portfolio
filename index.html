@@ -1,68 +1,230 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parth Jha | Frontend Developer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <h1>Parth</h1>
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="#" class="header__logo">Parth<span>.</span></a>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+            <button class="header__toggle" id="nav-toggle" aria-label="Toggle Navigation">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
 
-<main>
+            <nav class="nav" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link nav__link--button">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<section id="about">
-    <h2>About Me</h2>
-     <img src="images/profile.avif" alt="Profile Picture" width="200">
-    <p>I am a B.Tech Information Science student interested in web development and AI.</p>
-</section>
+    <main class="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero section reveal">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <span class="hero__greeting">Hello, I'm</span>
+                    <h1 class="hero__title">Parth Jha</h1>
+                    <h2 class="hero__subtitle">Frontend Developer & Software Engineer</h2>
+                    <p class="hero__description">
+                        I build scalable, responsive, and visually appealing web applications. Focused on writing clean code, creating modern user experiences, and exploring new technologies.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="#projects" class="btn btn--primary">View My Work</a>
+                        <a href="#contact" class="btn btn--outline">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero__image-wrapper">
+                    <div class="hero__shape"></div>
+                    <!-- fallback if image path is broken -->
+                    <img src="images/profile.avif" alt="Parth Profile" class="hero__img" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'350\' height=\'350\'><rect width=\'350\' height=\'350\' fill=\'%23e2e8f0\'/></svg>'">
+                </div>
+            </div>
+        </section>
 
-<section id="skills">
-    <h2>Skills</h2>
-    <ul>
-        <li>C Programming</li>
-        <li>Java</li>
-        <li>HTML</li>
-        <li>React</li>
-        <li>MySQL</li>
-    </ul>
-</section>
+        <!-- About Section -->
+        <section id="about" class="about section reveal">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">About Me</h2>
+                    <span class="section__subtitle">My Introduction</span>
+                </div>
 
-<section id="contact">
-    <h2>Contact Me</h2>
+                <div class="about__container grid">
+                    <div class="about__data">
+                        <p class="about__description">
+                            I am a B.Tech Information Science student passionate about software development, web technologies, and building highly scalable systems. I love turning complex problems into simple, beautiful, and intuitive designs. Currently, I am focused on mastering modern full-stack development.
+                        </p>
+                        
+                        <div class="about__info grid">
+                            <div class="about__box">
+                                <h3 class="about__title">Experience</h3>
+                                <span class="about__subtitle">Learning & Building</span>
+                            </div>
+                            <div class="about__box">
+                                <h3 class="about__title">Projects</h3>
+                                <span class="about__subtitle">15+ Completed</span>
+                            </div>
+                            <div class="about__box">
+                                <h3 class="about__title">Support</h3>
+                                <span class="about__subtitle">Online 24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <form>
-        <label>Name:</label>
-        <input type="text" required>
+        <!-- Skills Section -->
+        <section id="skills" class="skills section reveal">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Skills & Technologies</h2>
+                    <span class="section__subtitle">My Technical Expertise</span>
+                </div>
 
-        <br><br>
+                <div class="skills__grid">
+                    <div class="skill-card">
+                        <div class="skill-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 19.93C7.05 19.43 4 16.05 4 12C4 7.95 7.05 4.57 11 4.07V19.93ZM13 4.07C16.95 4.57 20 7.95 20 12C20 16.05 16.95 19.43 13 19.93V4.07Z" fill="var(--primary-color)"/>
+                            </svg>
+                        </div>
+                        <h3 class="skill-card__title">Frontend</h3>
+                        <p class="skill-card__desc">HTML5, CSS3, JavaScript (ES6+), React.js, Responsive Design</p>
+                    </div>
 
-        <label>Email:</label>
-        <input type="email" required>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 4H4C2.89 4 2.01 4.89 2.01 6L2 18C2 19.11 2.89 20 4 20H20C21.11 20 22 19.11 22 18V6C22 4.89 21.11 4 20 4ZM20 18H4V6H20V18ZM10.5 9H8V6H6V9H3.5V11H6V14H8V11H10.5V9ZM20.5 14H13V16H20.5V14ZM18 9H13V11H18V9Z" fill="var(--primary-color)"/>
+                            </svg>
+                        </div>
+                        <h3 class="skill-card__title">Backend</h3>
+                        <p class="skill-card__desc">Node.js, Express, Java, C, REST APIs</p>
+                    </div>
 
-        <br><br>
+                    <div class="skill-card">
+                        <div class="skill-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 7H13V13H11V7ZM11 15H13V17H11V15Z" fill="var(--primary-color)"/>
+                            </svg>
+                        </div>
+                        <h3 class="skill-card__title">Databases & Tools</h3>
+                        <p class="skill-card__desc">MySQL, MongoDB, Git, GitHub, Postman, VS Code</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <label>Message:</label>
-        <textarea required></textarea>
+        <!-- Contact Section -->
+        <section id="contact" class="contact section reveal">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Get In Touch</h2>
+                    <span class="section__subtitle">Contact Me</span>
+                </div>
 
-        <br><br>
+                <div class="contact__container grid">
+                    <div class="contact__info">
+                        <h3 class="contact__title">Let's talk about everything!</h3>
+                        <p class="contact__text">Don't like forms? Reach out to me directly through email or social platforms.</p>
+                        
+                        <div class="contact__details">
+                            <div class="contact__item">
+                                <span class="contact__icon">✉️</span>
+                                <div>
+                                    <h4 class="contact__item-title">Email</h4>
+                                    <span class="contact__item-data">your.email@example.com</span>
+                                </div>
+                            </div>
+                            <div class="contact__item">
+                                <span class="contact__icon">📍</span>
+                                <div>
+                                    <h4 class="contact__item-title">Location</h4>
+                                    <span class="contact__item-data">Karnataka, India</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        <button type="submit">Send</button>
-    </form>
-</section>
+                    <form class="contact__form" id="contact-form">
+                        <div class="form__group">
+                            <div class="form__input-wrapper">
+                                <label for="name" class="form__label">Name</label>
+                                <input type="text" id="name" class="form__input" placeholder="John Doe" required>
+                                <span class="form__error">Name is required</span>
+                            </div>
+                            
+                            <div class="form__input-wrapper">
+                                <label for="email" class="form__label">Email</label>
+                                <input type="email" id="email" class="form__input" placeholder="john@example.com" required>
+                                <span class="form__error">Please enter a valid email</span>
+                            </div>
+                        </div>
 
-</main>
+                        <div class="form__input-wrapper">
+                            <label for="subject" class="form__label">Subject</label>
+                            <input type="text" id="subject" class="form__input" placeholder="Project Inquiry" required>
+                        </div>
 
-<footer>
-    <p>© 2026 Parth</p>
-</footer>
+                        <div class="form__input-wrapper">
+                            <label for="message" class="form__label">Message</label>
+                            <textarea id="message" rows="5" class="form__input" placeholder="Hello Parth, I would like to talk about..." required></textarea>
+                        </div>
 
+                        <button type="submit" class="btn btn--primary btn--block">
+                            Send Message
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 8px; vertical-align: middle;">
+                                <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <h2 class="footer__title">Parth Jha</h2>
+            <ul class="footer__links">
+                <li><a href="#about" class="footer__link">About</a></li>
+                <li><a href="#skills" class="footer__link">Skills</a></li>
+                <li><a href="#contact" class="footer__link">Contact</a></li>
+            </ul>
+            <div class="footer__socials">
+                <a href="#" class="footer__social-link" aria-label="LinkedIn">💼</a>
+                <a href="#" class="footer__social-link" aria-label="GitHub">💻</a>
+                <a href="#" class="footer__social-link" aria-label="Twitter">🐦</a>
+            </div>
+            <p class="footer__copy">&#169; 2026 Parth Jha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
+
 </html>
