@@ -146,3 +146,10 @@ This project demonstrates the ability to build a **modern, responsive, and inter
 It reflects understanding of clean code practices, UI/UX principles, and scalable frontend development.
 
 ---
+
+## Week 3 Enhancements
+
+- Implemented advanced form validation with real-time error handling
+- Added dark/light mode toggle with localStorage persistence
+- Added typewriter effect for dynamic hero section
+- Used modular JavaScript functions for clean and scalable code
